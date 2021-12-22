@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NPModelStoreContainer" CdmEntityContainer="NPEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="NPModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ctgr" ColumnName="Ctgr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="NPModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Cmnt" ColumnName="Cmnt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Newsses">
+      <EntityTypeMapping TypeName="NPModel.Newss">
+        <MappingFragment StoreEntitySet="Newss">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CtgrId" ColumnName="CtgrId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reacts">
+      <EntityTypeMapping TypeName="NPModel.React">
+        <MappingFragment StoreEntitySet="Reacts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Rct" ColumnName="Rct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Totals">
+      <EntityTypeMapping TypeName="NPModel.Total">
+        <MappingFragment StoreEntitySet="Totals">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+          <ScalarProperty Name="TotalLike" ColumnName="TotalLike" />
+          <ScalarProperty Name="TotalDislike" ColumnName="TotalDislike" />
+          <ScalarProperty Name="TotalCmnt" ColumnName="TotalCmnt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="NPModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
