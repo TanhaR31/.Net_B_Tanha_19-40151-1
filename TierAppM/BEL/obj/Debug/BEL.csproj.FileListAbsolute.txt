@@ -1,0 +1,6 @@
+D:\AIUB\2 FINAL\.NET\Lab\TierAppM\BEL\bin\Debug\BEL.dll
+D:\AIUB\2 FINAL\.NET\Lab\TierAppM\BEL\bin\Debug\BEL.pdb
+D:\AIUB\2 FINAL\.NET\Lab\TierAppM\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+D:\AIUB\2 FINAL\.NET\Lab\TierAppM\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+D:\AIUB\2 FINAL\.NET\Lab\TierAppM\BEL\obj\Debug\BEL.dll
+D:\AIUB\2 FINAL\.NET\Lab\TierAppM\BEL\obj\Debug\BEL.pdb

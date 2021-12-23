@@ -1,0 +1,23 @@
+﻿@model Task.Models.Entities.Product
+@{
+    ViewBag.Title = "Create";
+}
+
+<br /><h2 style="color: forestgreen; text-align: center;">Add New Product</h2><hr />
+
+<form action="/Product/Create" method="post">
+
+    Name: <input type="text" class="form-control" value="@Model.Name" name="Name" />
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+
+    <br />Description: <input type="text" class="form-control" value="@Model.Description" name="Description" />
+    @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+
+    <br />Quantity: <input type="number" class="form-control" value="@Model.Quantity" name="Quantity" />
+    @Html.ValidationMessageFor(m => m.Quantity, "", new { @class = "text-danger" })
+
+    <br />Price: <input type="number" class="form-control" value="@Model.Price" name="Price" />
+    @Html.ValidationMessageFor(m => m.Price, "", new { @class = "text-danger" })
+
+    <br /><input type="submit" value="Confirm" class="btn btn-success" />
+</form>

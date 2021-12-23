@@ -1,0 +1,35 @@
+﻿@model List<Task.Models.Entities.Product>
+@{
+    ViewBag.Title = "List";
+}
+
+<hr />
+<h2 style="color:forestgreen; text-align: center">All Products</h2>
+<table class="table table-bordered"> 
+    <tr style="text-align: center;">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <!--dynamic row-->
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.Name</td>
+            <td>@s.Description</td>
+            <td>@s.Quantity</td>
+            <td>@s.Price</td>
+            <td><a href="/product/edit/@s.Id" class="btn btn-success">Edit</a></td>
+            <td><a href="/product/delete/@s.Id" class="btn btn-danger">Delete</a></td>
+        </tr>
+    }
+</table>
+<hr />
+<p style="text-align: center;"><a class="btn btn-success" href="/Product/Create">Add New Product</a></p>
+<p style="text-align: center;"><a class="btn btn-success" href="/Product/Yorder">Order Now!</a></p>
+<p style="text-align: center;"><a class="btn btn-success" href="/Product/Cart">Your Cart</a></p>

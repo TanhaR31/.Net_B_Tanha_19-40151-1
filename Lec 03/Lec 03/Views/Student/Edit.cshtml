@@ -1,0 +1,26 @@
+﻿@model Lec_03.Models.Entities.Student
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="/Student/Edit" method="post">
+    Name: <input type="text" class="form-control" value="@Model.Name" name="Name" />
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    <!--Razor syntax. better to use. 1st e view k model er sathe bind korte hbe, 1st line.
+        1st param -> kon tar jonno msg dekhate chai
+        2nd param ->msg
+        3rd param -> bootsrap er jonno-->
+
+    <br /><br />Dob: <input type="date" class="form-control" value="@Model.Dob" name="Dob" />
+    @Html.ValidationMessageFor(m => m.Dob, "", new { @class = "text-danger" })
+
+    <br /><br />Gender:
+
+    <input type="radio" checked name="Gender" value="Male" />Male
+    <input type="radio" name="Gender" value="Female" />Female<br />
+    @Html.ValidationMessageFor(m => m.Gender, "", new { @class = "text-danger" })
+
+    <br /><input type="submit" value="Add" class="btn btn-success" />
+</form>

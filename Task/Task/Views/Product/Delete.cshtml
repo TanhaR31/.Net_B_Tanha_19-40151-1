@@ -1,0 +1,25 @@
+﻿@model Task.Models.Entities.Product
+@{
+    ViewBag.Title = "Delete";
+}
+
+<br /><h2 style="color: red; text-align: center;">Delete This Product?</h2><hr />
+
+<form action="/Product/Delete" method="post">
+
+    <input type="hidden" class="form-control" value="@Model.Id" name="Id" />
+
+    Name: <input type="text" class="form-control" value="@Model.Name" name="Name" />
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+
+    Description: <input type="text" class="form-control" value="@Model.Description" name="Description" />
+    @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+
+    Quantity: <input type="number" class="form-control" value="@Model.Quantity" name="Quantity" />
+    @Html.ValidationMessageFor(m => m.Quantity, "", new { @class = "text-danger" })
+
+    Price: <input type="number" class="form-control" value="@Model.Price" name="Price" />
+    @Html.ValidationMessageFor(m => m.Price, "", new { @class = "text-danger" })
+
+    <br /><input type="submit" value="Delete" class="btn btn-danger" />
+</form>
