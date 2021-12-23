@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RMS.Models.VM.ProductVM>
+
+@{
+    ViewBag.Title = "Product Index";
+}
+
+@if (Session["User"] == null)
+{
+    <h4 style="text-align: center; color:black">You Need To Log In First</h4>
+    <h1 style="text-align: center;"><a class="btn btn-success" href="/Home/Login">Login Page</a></h1>
+}
+else
+{
+    <h4 style="text-align:right;">&infin; User @Session["User"] &infin;</h4><hr />
+    <h2 style="text-align:center;">Product Index</h2>
+
+    <p class="form-group" style="text-align:center">
+        <a class="btn btn-success" href="/Product/Create">Add New Product</a>
+    </p>
+    <hr />
+    <table class="table table-bordered">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <hr />
+
+    <p class="form-group" style="text-align:center">
+        <a class="btn btn-warning" href="/Home/Index">Back To Home</a>
+    </p>
+}

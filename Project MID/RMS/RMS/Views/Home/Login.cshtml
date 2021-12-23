@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Login Page";
+}
+
+<h3 style="text-align:center">Login Panel</h3>
+<hr />
+
+<h4 style="color: red; text-align: center;">@ViewData["Err"]</h4>
+<hr />
+<form action="/Home/Login" style="text-align:center;" method="post">
+
+    User Name : <input type="text" name="UserName"><br /><br />
+    Password &ensp; :  <input type="password" name="Password"><br />
+    <input type="hidden" name="Id">
+    <input type="hidden" name="Type">
+
+    <br /><input type="submit" value="Login" class="btn btn-success">
+
+</form>

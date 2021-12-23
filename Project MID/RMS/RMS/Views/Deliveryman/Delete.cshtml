@@ -1,0 +1,62 @@
+﻿@model RMS.Models.VM.DeliverymanVM
+
+@{
+    ViewBag.Title = "Delete Deliveryman";
+}
+
+<h3 style="color:red;">Are you sure you want to delete @Model.DeliverymanName?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliverymanName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliverymanName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a class="btn btn-warning" href="/Deliveryman/Deliveryman">Back To List</a>
+        </div>
+    }
+</div>

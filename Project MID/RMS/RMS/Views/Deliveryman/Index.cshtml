@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Delivery Index";
+}
+
+@if (Session["User"] == null)
+{
+    <h4 style="text-align: center; color:black">You Need To Log In First</h4>
+    <h1 style="text-align: center;"><a class="btn btn-success" href="/Home/Login">Login Page</a></h1>
+}
+else
+{
+    <h4 style="text-align:right;">&infin; User @Session["User"] &infin;</h4>
+    <hr />
+    <h2 style="text-align:center;">Delivery Index</h2>
+    <hr />
+
+    <p style="text-align: center;"><a class="btn btn-success" href="/Deliveryman/Orders"> All Orders Status </a></p>
+    <p style="text-align: center;"><a class="btn btn-success" href="/Deliveryman/Deliveries">Assign Deliveryman</a></p>
+    <p style="text-align: center;"><a class="btn btn-success" href="/Deliveryman/Deliveryman"> All Delivery Men </a></p>
+    <p style="text-align: center;"><a class="btn btn-success" href="/Deliveryman/Free"> Free Delivery Men </a></p>
+    <p style="text-align: center;"><a class="btn btn-success" href="/Deliveryman/Create">Add Deliveryman</a></p>
+
+    <hr />
+    <p class="form-group" style="text-align:center">
+        <a class="btn btn-warning" href="/Home/Index">Back To Home</a>
+    </p>
+}
+

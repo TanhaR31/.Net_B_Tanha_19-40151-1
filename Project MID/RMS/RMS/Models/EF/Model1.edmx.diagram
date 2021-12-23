@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e21b477809834173aca20370292d7d38" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="RMSModel.Cart" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.CustomersDetail" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.Delivery" Width="1.5" PointX="7.5" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.DeliverymansDetail" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.Feedback" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.ManagersDetail" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.Order" Width="1.5" PointX="5.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.OrdersDetail" Width="1.5" PointX="7.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.Product" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSModel.User" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <AssociationConnector Association="RMSModel.FK_Carts_CustomersDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_Carts_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_CustomersDetails_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_Deliveries_CustomersDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_Feedbacks_CustomersDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_Orders_CustomersDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_Deliveries_DeliverymansDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_Deliveries_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_DeliverymansDetails_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_ManagersDetails_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_OrdersDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSModel.FK_OrdersDetails_Products" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

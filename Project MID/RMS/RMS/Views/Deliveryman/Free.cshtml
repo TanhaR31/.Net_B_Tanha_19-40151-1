@@ -1,0 +1,58 @@
+﻿@model IEnumerable<RMS.Models.VM.DeliverymanVM>
+
+@{
+    ViewBag.Title = "Free Delivery Men";
+}
+
+<h3 style="text-align:center">Free Delivery Men</h3><hr />
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliverymanName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliverymanName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+        </tr>
+    }
+
+</table><hr />
+<p class="form-group" style="text-align:center">
+    <a class="btn btn-warning" href="/Deliveryman/Deliveryman">Back To Deliveryman List</a>
+</p>

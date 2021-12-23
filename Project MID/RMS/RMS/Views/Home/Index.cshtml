@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (Session["User"] == null)
+{
+    <h4 style="text-align: center; color:black">You Need To Log In First</h4>
+    <h1 style="text-align: center;"><a class="btn btn-success" href="/Home/Login">Login Page</a></h1>
+}
+else
+{
+    <h3 style="text-align:center;">Hello User @Session["User"]!</h3>
+    <hr />
+
+    <p style="text-align: center;"><a class="btn btn-success" href="/Product/Index">Product Index</a></p>
+    <p style="text-align: center;"><a class="btn btn-success" href="/Deliveryman/Index">Delivery Index</a></p>
+    <p style="text-align: center;"><a class="btn btn-success" href="/Manager/List">Manager Index</a></p>
+
+    <hr /><p style="text-align: center;"><a href="/home/logout" class="btn btn-danger">Log Out</a></p>
+}
+
+

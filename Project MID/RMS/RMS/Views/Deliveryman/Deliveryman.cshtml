@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RMS.Models.VM.DeliverymanVM>
+
+@{
+    ViewBag.Title = "Deliveryman";
+}
+<h4 style="text-align:right;">&infin; User @Session["User"] &infin;</h4>
+<hr />
+<h3 style="text-align:center;">Deliveryman List</h3>
+
+<p class="form-group" style="text-align:center">
+    <a class="btn btn-success" href="/Deliveryman/Create">Add New Deliveryman</a>
+    <a class="btn btn-success" href="/Deliveryman/Free">See Free Deliverymen</a>
+</p>
+<hr />
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliverymanName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeliverymanName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Update", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<hr />
+<p class="form-group" style="text-align:center">
+    <a class="btn btn-warning" href="/Deliveryman/Index">Go To Delivery Index</a>
+    <a class="btn btn-warning" href="/Deliveryman/Deliveries">Go To Deliveries</a>
+</p>
